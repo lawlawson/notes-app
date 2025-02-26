@@ -13,10 +13,10 @@ async function fetchNotes() {
     .map(
       (note) =>
         `<li>
-            <strong>${note.title}</strong>: ${note.content}
-            <button onclick="editNote(${note.id}, '${note.title}', '${note.content}')">Add Note</button>
-            <button onclick="deleteNote(${note.id})">Delete Note</button>
-        </li>`
+            <strong>${note.title}</strong> ${note.content} 
+        </li>
+        <button onclick="editNote(${note.id}, '${note.title}', '${note.content}')"><i class="fa-regular fa-pen-to-square"></i>Edit note</button>
+        <button onclick="deleteNote(${note.id})"><i class="fa-solid fa-trash"></i>Delete note</button>`
     )
     .join('');
 }
