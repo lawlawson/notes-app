@@ -23,9 +23,18 @@
       <h1>Notes App</h1>
       <form id="note-form">
         <input type="hidden" id="note-id" />
-        <input type="text" id="title" placeholder="Title" required />
-        <textarea id="content" placeholder="Note" required></textarea>
-        <button type="submit">Save Note</button>
+        <input
+          type="text"
+          class="title-area"
+          id="title"
+          placeholder="Title"
+          required />
+        <textarea
+          class="textarea"
+          id="content"
+          placeholder="Note"
+          required></textarea>
+        <button class="save-button" type="submit">Save Note</button>
       </form>
       <ul id="notes-list"></ul>
     </div>
