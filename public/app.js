@@ -14,8 +14,8 @@ async function fetchNotes() {
       (note) =>
         `<li>
             <strong>${note.title}</strong>: ${note.content}
-            <button onclick="editNote(${note.id}, '${note.title}', '${note.content}')">✏️</button>
-            <button onclick="deleteNote(${note.id})">🗑</button>
+            <button onclick="editNote(${note.id}, '${note.title}', '${note.content}')">Add Note</button>
+            <button onclick="deleteNote(${note.id})">Delete Note</button>
         </li>`
     )
     .join('');
