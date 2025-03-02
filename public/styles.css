@@ -3,15 +3,27 @@ body {
   background: #f8f9fa;
   padding: 20px;
   font-family: 'Happy Monkey', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .container {
+  flex: 0 0 30%;
   max-width: 800px;
-  margin: auto;
-  background: white;
+  margin: 0 auto;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.list-container {
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+.list-container ul {
+  margin: 50px 0;
 }
 
 h1 {
@@ -59,12 +71,12 @@ ul {
 }
 
 li {
-  background: #eee;
   padding: 10px;
   margin: 5px 0;
   display: flex;
   justify-content: space-between;
   border-radius: 5px;
+  text-align: left;
 }
 
 li button {
