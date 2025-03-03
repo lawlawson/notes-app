@@ -19,26 +19,28 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>Notes 'R' Us</h1>
-      <form id="note-form">
-        <input type="hidden" id="note-id" />
-        <input
-          type="text"
-          class="title-area"
-          id="title"
-          placeholder="Title"
-          required />
-        <textarea
-          class="textarea"
-          id="content"
-          placeholder="Note"
-          required></textarea>
-        <button class="save-button" type="submit">Save Note</button>
-      </form>
-    </div>
-    <div class="list-container">
-      <ul id="notes-list"></ul>
+    <div class="main-wrapper">
+      <div class="container">
+        <h1>Notes 'R' Us</h1>
+        <form id="note-form">
+          <input type="hidden" id="note-id" />
+          <input
+            type="text"
+            class="title-area"
+            id="title"
+            placeholder="Title"
+            required />
+          <textarea
+            class="textarea"
+            id="content"
+            placeholder="Note"
+            required></textarea>
+          <button class="save-button" type="submit">Save Note</button>
+        </form>
+      </div>
+      <div class="list-container">
+        <ul id="notes-list"></ul>
+      </div>
     </div>
     <script src="app.js"></script>
   </body>

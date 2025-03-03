@@ -1,81 +1,113 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Happy Monkey', sans-serif;
   background: #f8f9fa;
   padding: 20px;
-  font-family: 'Happy Monkey', sans-serif;
-  /* display: flex; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.container {
-  /* flex: 0 0 70%; */
+/* Center everything and make it stack */
+.main-wrapper {
+  width: 100%;
   max-width: 800px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form container */
+.container {
+  width: 100%;
+  background: white;
   padding: 20px;
   border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+#content {
+  height: 200px;
+}
+
+.container h1 {
+  text-align: center;
+}
+
+/* List container */
 .list-container {
-  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 8px;
   overflow-x: hidden;
   word-wrap: break-word;
-  margin: 50px auto;
 }
 
 .list-container ul {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 .list-container ul li {
-  margin-top: 50px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  max-width: 100%;
+  word-break: break-word; /* Forces breaks in long words */
+  overflow-wrap: anywhere; /* Ensures text wraps at any possible break point */
+  white-space: normal; /* Allows wrapping */
+}
+
+/* Buttons */
+.edit-button,
+.delete-button {
+  width: 49.5%;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .edit-button {
   background-color: #eaf7cf;
-  margin-right: 10px;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
+  margin-right: 5px;
 }
 
 .delete-button {
   background-color: #db5461;
-  color: #fff;
-  margin-right: 10px;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
+  color: white;
 }
 
-h1 {
-  text-align: center;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-input {
-  margin: 10px 0;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
+/* Form elements */
+input,
 textarea {
+  width: 100%;
   margin: 10px 0;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  height: 150px;
 }
 
 .save-button {
+  width: 100%;
+  padding: 10px;
   background: #75b9be;
   color: white;
   font-weight: bold;
   font-size: 1.2rem;
-  padding: 10px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -85,40 +117,17 @@ textarea {
   background: #619fa3;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  padding: 10px;
-  margin: 5px 0;
+#notes-list {
   display: flex;
-  justify-content: space-between;
-  border-radius: 5px;
-  text-align: left;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-li button {
-  color: #000;
-  border: none;
-  padding: 5px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-li button:hover {
-  background: darkred;
-}
-
-@media (max-width: 768px) {
-  body {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .container,
-  .list-container {
-    flex: 1 1 100%;
+@media (max-width: 425px) {
+  /* Adjust breakpoint as needed */
+  .edit-button,
+  .delete-button {
+    flex-direction: column; /* Stack buttons vertically */
+    width: 100%;
   }
 }
