@@ -5,7 +5,6 @@ const contentInput = document.getElementById('content');
 const noteIdInput = document.getElementById('note-id');
 const notesList = document.getElementById('notes-list');
 
-// Fetch and display notes
 async function fetchNotes() {
   const res = await fetch(API_URL);
   const notes = await res.json();
@@ -15,13 +14,12 @@ async function fetchNotes() {
         `<li>
             <strong>${note.title}</strong> ${note.content} 
         </li>
-        <button onclick="editNote(${note.id}, '${note.title}', '${note.content}')"><i class="fa-regular fa-pen-to-square"></i>Edit note</button>
-        <button onclick="deleteNote(${note.id})"><i class="fa-solid fa-trash"></i>Delete note</button>`
+        <button class="edit-button" onclick="editNote(${note.id}, '${note.title}', '${note.content}')"><i class="fa-regular fa-pen-to-square"></i>Edit note</button>
+        <button class="delete-button" onclick="deleteNote(${note.id})"><i class="fa-solid fa-trash"></i>Delete note</button>`
     )
     .join('');
 }
 
-// Add or update note
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const id = noteIdInput.value;
@@ -42,18 +40,15 @@ form.addEventListener('submit', async (e) => {
   fetchNotes();
 });
 
-// Edit note
 function editNote(id, title, content) {
   noteIdInput.value = id;
   titleInput.value = title;
   contentInput.value = content;
 }
 
-// Delete note
 async function deleteNote(id) {
   await fetch(`${API_URL}/${id}`, { method: 'DELETE' });
   fetchNotes();
 }
 
-// Load notes on startup
 fetchNotes();

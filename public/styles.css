@@ -16,11 +16,34 @@ body {
 
 .list-container {
   max-width: 800px;
+  overflow-x: hidden;
+  word-wrap: break-word;
   margin: 50px auto;
 }
 
+.list-container ul {
+  margin-bottom: 100px;
+}
+
 .list-container ul li {
-  margin: 50px 0;
+  margin-top: 50px;
+}
+
+.edit-button {
+  background-color: #eaf7cf;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.delete-button {
+  background-color: #db5461;
+  color: #fff;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
 }
 
 h1 {
